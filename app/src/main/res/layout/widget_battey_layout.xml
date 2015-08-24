@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+        <ImageView
+            android:id="@+id/battery_image_widget"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:src="@drawable/battery"
+            />
+
+
+    </LinearLayout>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TableRow>
+            <TextView
+                android:text="status : "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"/>
+
+            <TextView
+                android:text=""
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text = "Alarm Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"/>
+            <TextView
+                android:text=""
+                android:id="@+id/tvStatusAlarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"/>
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:text = "Level Battery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"/>
+            <TextView
+                android:text=""
+                android:id="@+id/tvLevelBattery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"/>
+
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:text = "Temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"/>
+            <TextView
+                android:text=""
+                android:id="@+id/tvTemperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"/>
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:text = "Healty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"/>
+            <TextView
+                android:text=""
+                android:id="@+id/tvHealtyStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"/>
+
+        </TableRow>
+
+    </TableLayout>
+
+
+
+</LinearLayout>

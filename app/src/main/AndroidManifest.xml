@@ -7,6 +7,26 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+        <receiver android:name=".BatteryWidgetMoniter"
+                  android:label="@string/app_name">
+
+            <intent-filter>
+
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name=".action.Update"/>
+
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_battery_info"   />
+
+        </receiver>
+
+        <service android:name=".ScreenMonitorBatteryService"></service>
+
+
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name" >
