@@ -1,9 +1,14 @@
 package com.example.nx.alarmbattery;
 
+
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,6 +16,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        Fragment_Configure fragment_configre = Fragment_Configure.newInstance("","");
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction  fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.frameLayout,fragment_configre);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+
         //a
     }
 

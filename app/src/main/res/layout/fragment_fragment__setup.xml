@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:lib = "http://schemas.android.com/apk/res-auto"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+    >
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            >
+            <RelativeLayout
+
+                android:id="@+id/layoutAlarmStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Alarm Status"
+                    android:paddingTop = "10dp"
+                    android:paddingLeft = "20dp"
+
+
+                    />
+                <android.support.v7.widget.SwitchCompat
+                    android:id="@+id/switch_compat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:paddingRight="10dp"
+                    >
+
+                </android.support.v7.widget.SwitchCompat>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/layoutAlarmType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/layoutAlarmStatus"
+                android:paddingTop="10dp"
+                android:layout_marginTop="10dp"
+
+                >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Alarm Type"
+                    android:padding="20dp"
+
+
+                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical"
+                    >
+
+                    <include
+
+                        android:id="@+id/alarmTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        layout="@layout/alarm_type_description"
+
+                        />
+                    <com.rey.material.widget.Slider
+
+                        android:id="@+id/sliderType"
+                        style="@style/Material.Widget.Slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        lib:sl_minValue="0"
+                        lib:sl_maxValue="100"
+                        lib:sl_value="50"
+
+
+                        />
+
+
+
+
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
